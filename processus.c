@@ -21,13 +21,13 @@ void init_table_processus() {
   strcpy(table_processus[PROC2].nom, "proc2");
   table_processus[PROC2].etat = ACTIVABLE;
   table_processus[PROC2].pile_execution[TAILLE_PILE-1] = (int) proc2;
-  table_processus[PROC2].regs[esp] = &(table_processus[PROC1].pile_execution[511]);
+  table_processus[PROC2].regs[esp] = &(table_processus[PROC2].pile_execution[511]);
 
   table_processus[PROC3].pid = 3;
   strcpy(table_processus[PROC3].nom, "proc3");
   table_processus[PROC3].etat = ACTIVABLE;
   table_processus[PROC3].pile_execution[TAILLE_PILE-1] = (int) proc3;
-  table_processus[PROC3].regs[esp] = &(table_processus[PROC1].pile_execution[511]);
+  table_processus[PROC3].regs[esp] = &(table_processus[PROC3].pile_execution[511]);
 
   proc_actif = &(table_processus[IDLE]);
 }
